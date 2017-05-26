@@ -1,0 +1,33 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.sats.app"
+    },
+    "jhipsterVersion": "4.4.1",
+    "baseName": "testApp",
+    "packageName": "com.sats.app",
+    "packageFolder": "com/sats/app",
+    "serverPort": "8080",
+    "authenticationType": "oauth2",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": false,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSocialSignIn": false,
+    "clientFramework": "angular1",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "applicationType": "monolith",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}

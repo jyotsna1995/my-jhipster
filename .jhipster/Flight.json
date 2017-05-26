@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "flno",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "orgn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dest",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "flda",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20170524124429",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "flight",
+    "pagination": "pager"
+}

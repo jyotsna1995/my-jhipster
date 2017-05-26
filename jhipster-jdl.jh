@@ -1,0 +1,8 @@
+
+entity Flight {
+	flno String,
+	orgn String,
+	dest String,
+	flda ZonedDateTime
+}
+

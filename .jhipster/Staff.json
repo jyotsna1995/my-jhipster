@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "designation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "department",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170525091153",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "staff",
+    "pagination": "pager"
+}

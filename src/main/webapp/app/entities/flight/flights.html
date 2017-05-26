@@ -1,0 +1,66 @@
+<div>
+    <h2>Flights</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="flight.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Flight
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="flno"><span>Flno</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orgn"><span>Orgn</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dest"><span>Dest</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="flda"><span>Flda</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="flight in vm.flights track by flight.id">
+                    <td><a ui-sref="flight-detail({id:flight.id})">{{flight.id}}</a></td>
+                    <td>{{flight.flno}}</td>
+                    <td>{{flight.orgn}}</td>
+                    <td>{{flight.dest}}</td>
+                    <td>{{flight.flda | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="flight-detail({id:flight.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="flight.edit({id:flight.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="flight.delete({id:flight.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

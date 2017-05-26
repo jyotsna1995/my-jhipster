@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Staff</span> {{vm.staff.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>First Name</span></dt>
+        <dd>
+            <span>{{vm.staff.firstName}}</span>
+        </dd>
+        <dt><span>Last Name</span></dt>
+        <dd>
+            <span>{{vm.staff.lastName}}</span>
+        </dd>
+        <dt><span>Designation</span></dt>
+        <dd>
+            <span>{{vm.staff.designation}}</span>
+        </dd>
+        <dt><span>Department</span></dt>
+        <dd>
+            <span>{{vm.staff.department}}</span>
+        </dd>
+        <dt><span>Age</span></dt>
+        <dd>
+            <span>{{vm.staff.age}}</span>
+        </dd>
+        <dt><span>Address</span></dt>
+        <dd>
+            <span>{{vm.staff.address}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="staff-detail.edit({id:vm.staff.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

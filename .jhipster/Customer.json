@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "food",
+            "otherEntityName": "food",
+            "relationshipType": "ONE-to-one",
+            "otherEntityField": "ID"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "firstNmae",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastNmae",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170526063116",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "customer",
+    "pagination": "no"
+}

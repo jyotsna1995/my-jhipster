@@ -1,0 +1,26 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "staff",
+            "otherEntityName": "staff",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "region",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170525091431",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "language",
+    "pagination": "pager"
+}

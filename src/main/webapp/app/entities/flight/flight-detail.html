@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Flight</span> {{vm.flight.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Flno</span></dt>
+        <dd>
+            <span>{{vm.flight.flno}}</span>
+        </dd>
+        <dt><span>Orgn</span></dt>
+        <dd>
+            <span>{{vm.flight.orgn}}</span>
+        </dd>
+        <dt><span>Dest</span></dt>
+        <dd>
+            <span>{{vm.flight.dest}}</span>
+        </dd>
+        <dt><span>Flda</span></dt>
+        <dd>
+            <span>{{vm.flight.flda | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="flight-detail.edit({id:vm.flight.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>
